@@ -65,6 +65,13 @@ This will build the DevContainer defined in the .devcontainer folder, installing
    ```
 
 ## Usage
+First, Rename the `.env.example`` file to `.env` and configure the Stable Diffusion Engine and API key as appropriate.
+Example `.env` configuration:
+```
+SD_ENGINE_ID="stable-diffusion-v1-5"
+SD_API_SECRET_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
 Run the following command on your Linux terminal to generate a 1024x1024 pixel image.
 ```bash
 python main.py --seed=<YOUR_SEED> --prompt=<YOUR_PROMPT>
