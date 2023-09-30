@@ -66,47 +66,48 @@ This will build the DevContainer defined in the .devcontainer folder, installing
 
 ## Usage
 Run the following command on your Linux terminal to generate a 1024x1024 pixel image.
-    ```bash
-    python main.py --seed=<YOUR_SEED> --prompt=<YOUR_PROMPT>
-    ```
+```bash
+python main.py --seed=<YOUR_SEED> --prompt=<YOUR_PROMPT>
+```
+
 or
-    ```bash
-    python main.py -s=<YOUR_SEED> -p=<YOUR_PROMPT>
-    ```
+```bash
+python main.py -s=<YOUR_SEED> -p=<YOUR_PROMPT>
+```
 Replace <YOUR_SEED> and <YOUR_PROMPT> with the desired seed and prompt for image generation.
 
 Example:
-    ```bash
-    python main.py --seed=12345 --prompt="A beautiful sunset over the mountains."
-    ```
+```bash
+python main.py --seed=12345 --prompt="A beautiful sunset over the mountains."
+```
 This will produce a 1024x1024 pixel image based on the prompt and seed provided.
 
 ## (Others) Standalone Execution for 512x512 Pixel Image Generation
 The code for generating 512×512 pixel images using stable-diffusion-v1-5 can operate independently.
 
 Pattern1: CLI Execution
-    ```bash
-        python generate.py <ENGINE_ID> <YOUR_PROMPT>
-    ```
+```bash
+python generate.py <ENGINE_ID> <YOUR_PROMPT>
+```
 
 Pattern2: Class Invocation(No Return Value)
-    ```python
-    from generate import SDImageGenerator
-    engine_id = os.getenv('SD_ENGINE_ID')
-    generator_key = os.getenv('SD_API_SECRET_KEY')
-    engine_id = "stable-diffusion-v1-5"
-    generator = SDImageGenerator(engine_id, generator_key)
-    # No return value
-    generator.generate_image(prompt, <OUTPUT_SAVE_DIR>)
-    ```
+```python
+from generate import SDImageGenerator
+engine_id = os.getenv('SD_ENGINE_ID')
+generator_key = os.getenv('SD_API_SECRET_KEY')
+engine_id = "stable-diffusion-v1-5"
+generator = SDImageGenerator(engine_id, generator_key)
+# No return value
+generator.generate_image(prompt, <OUTPUT_SAVE_DIR>)
+```
 
 Pattern3: Class Invocation (Return Value: PIL Image)
-    ```python
-    from generate import SDImageGenerator
-    engine_id = os.getenv('SD_ENGINE_ID')
-    generator_key = os.getenv('SD_API_SECRET_KEY')
-    engine_id = "stable-diffusion-v1-5"
-    generator = SDImageGenerator(engine_id, generator_key)
-    # Return value: PIL Image
-    output_image = generator.generate_image(prompt, <OUTPUT_SAVE_DIR>, return_image_data=True)
-    ```
+```python
+from generate import SDImageGenerator
+engine_id = os.getenv('SD_ENGINE_ID')
+generator_key = os.getenv('SD_API_SECRET_KEY')
+engine_id = "stable-diffusion-v1-5"
+generator = SDImageGenerator(engine_id, generator_key)
+# Return value: PIL Image
+output_image = generator.generate_image(prompt, <OUTPUT_SAVE_DIR>, return_image_data=True)
+```
