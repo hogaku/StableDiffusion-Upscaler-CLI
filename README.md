@@ -8,6 +8,12 @@ Fig.1 The final output of Task(2): (a) Futuristic Forest Details, (b) Cosmic Con
 
 This project aims to generate high-resolution 1024x1024 pixel images using the Stable Diffusion model 1.4/1.5 and an advanced upsampler prototype. It is specifically designed to meet the requirements of strategically important clients who demand higher image resolutions than what is currently available in the standard Stable Diffusion packages.
 
+Currently, a researcher from Stability AI has released it [on Colab](./Stable_Diffusion_Upscaler_Demo.ipynb). However, it only works in a notebook environment. Therefore, I have prepared a program that can generate 1024x1024 pixel images in a Linux environment by providing prompts through command line arguments
+
+▼ Related Tweet
+https://x.com/StabilityAI/status/1590531946026717186?s=20
+
+
 ### Features
 
 - Generate 1024x1024 pixel images from given prompts.
@@ -70,5 +76,35 @@ Example:
     ```bash
     python main.py --seed=12345 --prompt="A beautiful sunset over the mountains."
 
-This will produce a 1024x1024 pixel image based on the prompt and seed provided
+This will produce a 1024x1024 pixel image based on the prompt and seed provided.
 
+## (Others) Standalone Execution for 512x512 Pixel Image Generation
+The code for generating 512×512 pixel images using stable-diffusion-v1-5 can operate independently.
+
+Pattern1: CLI Execution
+
+    ```bash
+        python generate.py <ENGINE_ID> <YOUR_PROMPT>
+
+
+Pattern2: Class Invocation(No Return Value)
+
+    ```python
+    from generate import SDImageGenerator
+    engine_id = os.getenv('SD_ENGINE_ID')
+    generator_key = os.getenv('SD_API_SECRET_KEY')
+    engine_id = "stable-diffusion-v1-5"
+    generator = SDImageGenerator(engine_id, generator_key)
+    # No return value
+    generator.generate_image(prompt, <OUTPUT_SAVE_DIR>)
+
+Pattern3: Class Invocation (Return Value: PIL Image)
+
+    ```python
+    from generate import SDImageGenerator
+    engine_id = os.getenv('SD_ENGINE_ID')
+    generator_key = os.getenv('SD_API_SECRET_KEY')
+    engine_id = "stable-diffusion-v1-5"
+    generator = SDImageGenerator(engine_id, generator_key)
+    # Return value: PIL Image
+    output_image = generator.generate_image(prompt, <OUTPUT_SAVE_DIR>, return_image_data=True)
