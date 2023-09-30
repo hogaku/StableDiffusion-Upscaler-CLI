@@ -5,7 +5,7 @@ Fig.1 Generated Images (1024×1024) using this code: (a) Futuristic Forest Detai
 
 ▶ Generated image files (1024×1024) and a pre-upscaled image file (512×512) are located in [this directory](./samples/).
 ![Upscaled generated images (pick up)](./img/upscaled_pick.png)
-Fig.2 Comparison of Resolution Before and After Processing: (left) 512×512, (right) 1024×1024: 
+Fig.2 Comparison of Resolution Before and After Processing: (left) 512×512, (right) 1024×1024 
 ## Overview
 
 This project aims to generate high-resolution 1024x1024 pixel images using the Stable Diffusion model 1.4/1.5 and an advanced upsampler prototype. It is specifically designed to meet the requirements of strategically important clients who demand higher image resolutions than what is currently available in the standard Stable Diffusion packages.
