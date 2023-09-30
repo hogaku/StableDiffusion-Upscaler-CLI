@@ -66,19 +66,16 @@ This will build the DevContainer defined in the .devcontainer folder, installing
 
 ## Usage
 Run the following command on your Linux terminal to generate a 1024x1024 pixel image.
-    
     ```bash
     python main.py --seed=<YOUR_SEED> --prompt=<YOUR_PROMPT>
     ```
 or
-
     ```bash
     python main.py -s=<YOUR_SEED> -p=<YOUR_PROMPT>
     ```
 Replace <YOUR_SEED> and <YOUR_PROMPT> with the desired seed and prompt for image generation.
 
 Example:
-    
     ```bash
     python main.py --seed=12345 --prompt="A beautiful sunset over the mountains."
     ```
@@ -88,13 +85,11 @@ This will produce a 1024x1024 pixel image based on the prompt and seed provided.
 The code for generating 512×512 pixel images using stable-diffusion-v1-5 can operate independently.
 
 Pattern1: CLI Execution
-
     ```bash
         python generate.py <ENGINE_ID> <YOUR_PROMPT>
     ```
 
 Pattern2: Class Invocation(No Return Value)
-
     ```python
     from generate import SDImageGenerator
     engine_id = os.getenv('SD_ENGINE_ID')
@@ -106,7 +101,6 @@ Pattern2: Class Invocation(No Return Value)
     ```
 
 Pattern3: Class Invocation (Return Value: PIL Image)
-
     ```python
     from generate import SDImageGenerator
     engine_id = os.getenv('SD_ENGINE_ID')
