@@ -3,7 +3,7 @@
 
 Fig.1 The final output of Task(2): (a) Futuristic Forest Details, (b) Cosmic Constellation Map, (c) Paint Strokes of a Virtual Reality Art (d) Augmented Human Eye,  (e) Architectural Marvels in a Smart City, (f) Macro Shot of a Nano-Insect, (g) Interactive Globe Details, (h) Clockwork of a Time Machine
 
-▶ Generated image files (1024×1024) are located in [this directory](./outputs/).
+▶ Generated image files (1024×1024) are located in [this directory](./samples/).
 ## Overview
 
 This project aims to generate high-resolution 1024x1024 pixel images using the Stable Diffusion model 1.4/1.5 and an advanced upsampler prototype. It is specifically designed to meet the requirements of strategically important clients who demand higher image resolutions than what is currently available in the standard Stable Diffusion packages.
