@@ -11,7 +11,8 @@ This project aims to generate high-resolution 1024x1024 pixel images using the S
 Currently, a researcher from Stability AI has released it [on Colab](./Stable_Diffusion_Upscaler_Demo.ipynb). However, it only works in a notebook environment. Therefore, I have prepared a program that can generate 1024x1024 pixel images in a Linux environment by providing prompts through command line arguments
 
 ▼ Related Tweet
-https://x.com/StabilityAI/status/1590531946026717186?s=20
+
+- https://x.com/StabilityAI/status/1590531946026717186?s=20
 
 
 ### Features
