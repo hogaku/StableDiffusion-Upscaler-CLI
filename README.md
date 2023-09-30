@@ -10,7 +10,7 @@ Fig.2 Comparison of Resolution Before and After Processing: (left) 512×512, (ri
 
 This project aims to generate high-resolution 1024x1024 pixel images using the Stable Diffusion model 1.4/1.5 and an advanced upsampler prototype. It is specifically designed to meet the requirements of strategically important clients who demand higher image resolutions than what is currently available in the standard Stable Diffusion packages.
 
-Currently, a researcher from Stability AI has released it [on Colab](./Stable_Diffusion_Upscaler_Demo.ipynb). However, it only works in a notebook environment. Therefore, I have prepared a program that can generate 1024x1024 pixel images in a Linux environment by providing prompts through command line arguments
+Currently, a researcher at Stability AI has released it [on Colab](./Stable_Diffusion_Upscaler_Demo.ipynb). However, it only works in a notebook environment. Therefore, I have prepared a program that can generate 1024x1024 pixel images in a Linux environment by providing prompts through command line arguments
 
 ▼ Related Tweet
 
